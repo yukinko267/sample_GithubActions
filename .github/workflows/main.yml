@@ -1,0 +1,25 @@
+name: Python Script Test
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  run-python:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1. リポジトリのコードをチェックアウト（仮想マシンにコピー）
+      - uses: actions/checkout@v4
+
+      # 2. Pythonのセットアップ
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      # 3. 自分のスクリプトを実行
+      - name: Run my script
+        run: python sample.py
