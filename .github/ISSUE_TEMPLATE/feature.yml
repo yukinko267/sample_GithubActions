@@ -1,0 +1,12 @@
+
+name: Feature Request
+description: 新しい機能を提案する
+title: "[Feature] "
+labels: ["enhancement"]
+body:
+  - type: textarea
+    attributes:
+      label: 機能の内容
+    validations:
+      required: true
+
